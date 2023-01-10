@@ -26,7 +26,7 @@ public class Uri2737Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		List<LawyerMinProjection> search = lawyerRepository.searchLawyerByMaxMinCustomersNumber();
-		search.forEach(x -> System.out.println(x.getName()+" " + x.getCustomersNumber()+ " " + ));
+		search.forEach(x -> System.out.println(x.getName()+" " + x.getCustomersNumber()));
 
 	}
 }

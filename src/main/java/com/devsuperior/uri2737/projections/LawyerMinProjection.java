@@ -4,4 +4,6 @@ public interface LawyerMinProjection {
 
 	String getName();
 	Integer getCustomersNumber();
+
+
 }

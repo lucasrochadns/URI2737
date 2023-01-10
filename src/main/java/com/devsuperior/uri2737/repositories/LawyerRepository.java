@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface LawyerRepository extends JpaRepository<Lawyer, Long> {
 
-    @Query(nativeQuery = true, value="(SELECT name, customers_number " +
+    @Query(nativeQuery = true, value="(SELECT name, customers_number AS customersNumber " +
             "FROM lawyers WHERE customers_number = (SELECT MAX(customers_number) FROM lawyers)) " +
             "UNION ALL (SELECT name, customers_number " +
             "FROM lawyers WHERE customers_number = ((SELECT MIN(customers_number) FROM lawyers))) " +
